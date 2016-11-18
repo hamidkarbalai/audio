@@ -1,0 +1,1059 @@
+/*
+available controllers:
+	- whiteControllers
+	- blackControllers
+*/
+
+/* the border 
+
+.HamidKarbalaiBg {
+	position:relative;
+}
+*/
+
+/* the container */
+/*amidKarbalai {
+	background:#0000CC;
+	padding:0*/
+}
+
+
+.xaudioplaylist {
+	display:none;
+}
+
+/* jquery ui styles */
+.ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	display: block;
+	margin-left:-0.6em;
+	cursor: default;
+	outline: none;
+}
+
+.ui-slider-range {
+	display:block;
+	width:100%;	
+	height:100%;
+	left:0;
+	bottom: 0;
+	border:0 none;
+	position:absolute;
+	z-index:1;
+}
+
+.ui-progressbar { 
+	/*height: 5px;*/
+}
+.ui-progressbar-value {
+	height:100%;
+}
+
+
+
+/* whiteControllers */
+.HamidKarbalai.whiteControllers {
+	float: left;
+	position: relative;
+	font:11px Arial, Helvetica, sans-serif;
+	color:#FFF;
+	margin:0;
+	padding:0;
+}
+
+.HamidKarbalai.whiteControllers .AudioControls {
+	/*clear: both;*/
+	width: 100%;
+	margin:0;
+	padding:0;	
+}
+
+.HamidKarbalai.whiteControllers .ximage {
+	position:absolute;
+	width: 80px;
+	height: 80px;
+	/*border:1px solid #FFF;*/
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+
+
+/* rewind */
+.HamidKarbalai.whiteControllers .AudioRewind {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	z-index:1;
+	width: 12px;
+	height: 14px;
+	background: url(controllers/whiteControllers/rewind-off.png) no-repeat;	
+}
+.HamidKarbalai.whiteControllers .AudioRewind:hover {	
+    background: url(controllers/whiteControllers/rewind-on.png) no-repeat;	
+}
+.HamidKarbalai.whiteControllers .AudioShuffle {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	z-index:1;
+	width: 19px;
+	height: 14px;
+	background: url(controllers/whiteControllers/shuffle-off.png) no-repeat;	
+}
+.HamidKarbalai.whiteControllers .AudioShuffle:hover {	
+    background: url(controllers/whiteControllers/shuffle-on.png) no-repeat;	
+}
+.HamidKarbalai.whiteControllers .AudioShuffleON {	
+    background: url(controllers/whiteControllers/shuffle-on.png) no-repeat;	
+}
+
+.HamidKarbalai.whiteControllers .AudioDownload {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	z-index:1;
+	width: 15px;
+	height: 14px;
+	background: url(controllers/whiteControllers/download-off.png) no-repeat;	
+}
+.HamidKarbalai.whiteControllers .AudioDownload:hover {	
+    background: url(controllers/whiteControllers/download-on.png) no-repeat;	
+}
+
+.HamidKarbalai.whiteControllers .AudioFacebook {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	z-index:1;
+	width: 7px;
+	height: 14px;
+	background: url(controllers/whiteControllers/facebook-off.png) no-repeat;	
+}
+.HamidKarbalai.whiteControllers .AudioFacebook:hover {	
+    background: url(controllers/whiteControllers/facebook-on.png) no-repeat;	
+}
+
+.HamidKarbalai.whiteControllers .AudioTwitter {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	z-index:1;
+	width: 14px;
+	height: 14px;
+	background: url(controllers/whiteControllers/twitter-off.png) no-repeat;	
+}
+.HamidKarbalai.whiteControllers .AudioTwitter:hover {	
+    background: url(controllers/whiteControllers/twitter-on.png) no-repeat;	
+}
+
+
+
+/* play */
+.HamidKarbalai.whiteControllers .AudioPlay {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	width: 37px;
+	height: 37px;
+	background: url(controllers/whiteControllers/play-off.png) no-repeat;		
+}
+.HamidKarbalai.whiteControllers .AudioPlay:hover {	
+    background: url(controllers/whiteControllers/play-on.png) no-repeat;	
+}
+/* pause */
+.HamidKarbalai.whiteControllers .AudioPause {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	width: 37px;
+	height: 37px;
+	background: url(controllers/whiteControllers/pause-off.png) no-repeat;
+}
+.HamidKarbalai.whiteControllers .AudioPause:hover {
+	background: url(controllers/whiteControllers/pause-on.png) no-repeat;
+}
+/* prev */
+.HamidKarbalai.whiteControllers .AudioPrev {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	width: 27px;
+	height: 26px;
+	background: url(controllers/whiteControllers/prev-off.png) no-repeat;	
+}
+.HamidKarbalai.whiteControllers .AudioPrev:hover {	
+    background: url(controllers/whiteControllers/prev-on.png) no-repeat;	
+}
+/* next */
+.HamidKarbalai.whiteControllers .AudioNext {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	width: 27px;
+	height: 26px;
+	background: url(controllers/whiteControllers/next-off.png) no-repeat;	
+}
+.HamidKarbalai.whiteControllers .AudioNext:hover {	
+    background: url(controllers/whiteControllers/next-on.png) no-repeat;	
+}
+
+.HamidKarbalai.whiteControllers .bordersDiv {
+	position:absolute;
+	display: block;
+	margin:0;
+	padding:0;
+	height: 20px;
+	z-index:0;
+	border-top-width:1px;
+	border-top-style:solid;
+	border-top-color:#000000;	
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-bottom-color:#000000;
+}
+
+/*show/hide playlist */
+.HamidKarbalai.whiteControllers .AudioShowHidePlaylist {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	z-index:1;
+	width: 12px;
+	height: 14px;
+	background: url(controllers/whiteControllers/showhideplaylist-off.png) no-repeat;	
+}
+.HamidKarbalai.whiteControllers .AudioShowHidePlaylist:hover {	
+    background: url(controllers/whiteControllers/showhideplaylist-on.png) no-repeat;	
+}
+
+
+
+
+
+
+
+/* volume button Mute & UnMute*/
+.HamidKarbalai.whiteControllers .VolumeButton {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	width: 7px;
+	height: 10px;
+	background: url(controllers/whiteControllers/volume-off.png) no-repeat;
+}
+.HamidKarbalai.whiteControllers .VolumeButton:hover {
+	background: url(controllers/whiteControllers/volume-on.png) no-repeat;
+}
+
+.HamidKarbalai.whiteControllers .VolumeButtonMuted {
+	background: url(controllers/whiteControllers/volumeMute-off.png) no-repeat;
+}
+.HamidKarbalai.whiteControllers .VolumeButtonMuted:hover {
+	background: url(controllers/whiteControllers/volumeMute-on.png) no-repeat;
+}
+
+/* volume slider */
+.HamidKarbalai.whiteControllers .VolumeSlider {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	width:100px;
+	height:4px;
+	/*background: #fff000;*/
+}
+
+.HamidKarbalai.whiteControllers .VolumeSlider .ui-slider-handle {
+	display:none;
+}
+
+.HamidKarbalai.whiteControllers .VolumeSlider .ui-slider-handle.ui-state-hover {
+	/*background: #fff000;*/
+}
+
+.HamidKarbalai.whiteControllers .VolumeSlider .ui-slider-range {
+	position:relative;
+	height:4px;
+	/*background: #00F; blue*/
+}
+
+
+/* timer */
+.HamidKarbalai.whiteControllers .AudioTimer_a {
+	/*float:left;*/
+	position:absolute;
+	/*top:10px;
+	left:15px;*/
+	display: block;
+	margin:0;
+	padding:0;
+	line-height:1;
+	font-weight: normal;
+	/*border:1px solid #F00;*/
+}
+
+.HamidKarbalai.whiteControllers .AudioTimer_b {
+	/*float:left;*/
+	position:absolute;
+	/*top:10px;
+	right:15px;*/
+	display: block;
+	margin:0;
+	height:auto;
+	padding:0;
+	line-height:1;
+	display: block;
+	font-weight: normal;
+	/*border:1px solid #F00;*/
+}
+
+
+
+/* buffer */
+.HamidKarbalai.whiteControllers .AudioBuffer {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	height: 4px;
+	margin:0;
+	padding:0;	
+	/*width:100%;*/
+}
+.HamidKarbalai.whiteControllers .AudioBuffer .ui-widget-content {  }
+.HamidKarbalai.whiteControllers .AudioBuffer .ui-widget-header { /*background:#93C; mauve*/ }
+
+
+/* seek */
+.HamidKarbalai.whiteControllers .AudioSeek {
+	/*clear:both;*/
+	cursor: pointer;
+	position:absolute;
+	height: 4px;
+	margin:0;
+	padding:0;
+	/*margin-top:-9px; margin:5px 0px 5px 0px; (AudioBuffer) + height:4px;*/
+}
+
+.HamidKarbalai.whiteControllers .AudioSeek .ui-slider-handle {
+	display:none;
+}
+
+.HamidKarbalai.whiteControllers .AudioSeek .ui-slider-handle.ui-state-hover {
+	/*background: #fff000;*/
+}
+
+.HamidKarbalai.whiteControllers .AudioSeek .ui-slider-range {
+	height:4px;
+}
+
+
+
+/*song Author & Title*/
+.HamidKarbalai.whiteControllers .songTitle {
+	position:absolute;
+	float:left;
+	display: block;
+	overflow:hidden;
+	height:14px;
+	margin:0;
+	padding:0;
+	line-height:1;
+	font-weight: normal;
+}
+
+.HamidKarbalai.whiteControllers .songTitleInside {
+  position: absolute;
+  white-space: nowrap;
+}
+
+.HamidKarbalai.whiteControllers .songAuthor {
+	position:absolute;
+	float:left;
+	display: block;
+	overflow:hidden;
+	height:12px;
+	margin:0;
+	padding:0;
+	line-height:1;
+	font-weight: normal;
+	/*border:1px solid #CC6;*/
+}
+
+
+
+/* playlist */
+.HamidKarbalai.whiteControllers .selectedCategDiv {
+	cursor: pointer;
+	margin:0;
+	padding:0px 0px;
+	text-align:center;
+	/*font-size:13px;
+	line-height:1.5;
+	font-weight:bold;*/
+	background-image:url(controllers/whiteControllers/categories_arrow_bg.png);
+	background-repeat:no-repeat;
+}
+.HamidKarbalai.whiteControllers .innerSelectedCategDiv {
+	cursor: pointer;
+	overflow:hidden;
+	height:25px;
+	width:80%;
+	margin:0;
+	padding:0px 10%;
+	text-align:center;
+	font-size:13px;
+	line-height:1.9;
+	font-weight:bold;
+	background-image:url(controllers/whiteControllers/categories_arrow_bg.png);
+	background-repeat:no-repeat;
+}
+
+.HamidKarbalai.whiteControllers .searchDiv {
+	margin:0;
+	padding:0;
+	background-image:url(controllers/whiteControllers/search_icon.png);
+	background-repeat:no-repeat;
+	background-position: 10px 50%;
+}
+
+.HamidKarbalai.whiteControllers .search_term {
+	 background-color:#FFF;
+     border: 1px solid #333333;
+     color: #000000;
+     font:11px Arial, Helvetica, sans-serif;
+	 margin:3px 30px;
+     padding: 1px;
+}
+
+.HamidKarbalai.whiteControllers .thumbsHolderWrapper {
+	position:absolute;
+	height:100%;
+	margin-top:0px;
+	overflow:hidden;
+}
+.HamidKarbalai.whiteControllers .thumbsHolderVisibleWrapper {
+	/*position:absolute;*/
+	position:relative;
+	height:100%;
+	overflow:hidden;
+	clear:both;/*new*/
+}
+.HamidKarbalai.whiteControllers .thumbsHolder {
+	position:absolute;
+	text-align:left;
+}
+/* thumbsOFF */
+.HamidKarbalai.whiteControllers .thumbsHolder_ThumbOFF {
+	display:block;
+	height:30px;
+	cursor: pointer;
+	background:#000;
+	overflow:hidden;
+	border-bottom:1px solid #ff0000;
+	line-height:2.5em;
+}
+.HamidKarbalai.whiteControllers .thumbsHolder_ThumbOFF  .padding {
+	padding:2px 10px 10px 10px;
+}
+
+
+/*  scroller start */
+.HamidKarbalai.whiteControllers .slider-vertical {
+	display:none;
+	position:absolute;
+	width:9px;
+}
+
+.HamidKarbalai.whiteControllers .slider-vertical.ui-slider { position: relative;}
+.HamidKarbalai.whiteControllers .slider-vertical.ui-slider .ui-slider-handle { position: absolute; z-index: 2; width: 9px; height: 16px; cursor: pointer; background:url(controllers/whiteControllers/scrollerFaceOFF.png) 0 0 no-repeat; }
+.HamidKarbalai.whiteControllers .slider-vertical.ui-slider .ui-slider-handle:hover {  background:url(controllers/whiteControllers/scrollerFaceON.png) 0 0 no-repeat; }
+.HamidKarbalai.whiteControllers .slider-vertical.ui-slider .ui-slider-range { position: absolute; z-index: 1; display: block; border: 0; }
+
+
+.HamidKarbalai.whiteControllers .slider-vertical.ui-slider-vertical { width: 9px; height: 100px; }
+.HamidKarbalai.whiteControllers .slider-vertical.ui-slider-vertical .ui-slider-handle { left: 0px; margin-left: 0px; margin-bottom: -16px;; border: 0; }
+.HamidKarbalai.whiteControllers .slider-vertical.ui-slider-vertical .ui-slider-range { left: 0; width: 100%; }
+.HamidKarbalai.whiteControllers .slider-vertical.ui-slider-vertical .ui-slider-range-min { bottom: 0; }
+.HamidKarbalai.whiteControllers .slider-vertical.ui-slider-vertical .ui-slider-range-max { top: 0; }
+
+
+/* Component containers
+----------------------------------*/
+.HamidKarbalai.whiteControllers .slider-vertical.ui-widget-content { /*background: #ff7800;*/}
+.HamidKarbalai.whiteControllers .slider-vertical .ui-widget-header { /*background: #24ff00;*/ }
+
+
+/* Corner radius */
+.HamidKarbalai.whiteControllers .slider-vertical.ui-corner-all {}
+
+/* Interaction states
+----------------------------------
+.HamidKarbalai.whiteControllers .slider-vertical.ui-state-default {background: #000000; }
+.HamidKarbalai.whiteControllers .slider-vertical.ui-state-hover { background: #FFF000;  }
+*/
+/*  scroller end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* blackControllers */
+.HamidKarbalai.blackControllers {
+	float: left;
+	position: relative;
+	font:11px Arial, Helvetica, sans-serif;
+	color:#FFF;
+	margin:0;
+	padding:0;
+}
+
+.HamidKarbalai.blackControllers .AudioControls {
+	/*clear: both;*/
+	width: 100%;
+	margin:0;
+	padding:0;	
+}
+
+.HamidKarbalai.blackControllers .ximage {
+	position:absolute;
+	width: 80px;
+	height: 80px;
+	/*border:1px solid #FFF;*/
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+
+
+/* rewind */
+.HamidKarbalai.blackControllers .AudioRewind {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	z-index:1;
+	width: 12px;
+	height: 14px;
+	background: url(controllers/blackControllers/rewind-off.png) no-repeat;	
+}
+.HamidKarbalai.blackControllers .AudioRewind:hover {	
+    background: url(controllers/blackControllers/rewind-on.png) no-repeat;	
+}
+.HamidKarbalai.blackControllers .AudioShuffle {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	z-index:1;
+	width: 19px;
+	height: 14px;
+	background: url(controllers/blackControllers/shuffle-off.png) no-repeat;	
+}
+.HamidKarbalai.blackControllers .AudioShuffle:hover {	
+    background: url(controllers/blackControllers/shuffle-on.png) no-repeat;	
+}
+.HamidKarbalai.blackControllers .AudioShuffleON {	
+    background: url(controllers/blackControllers/shuffle-on.png) no-repeat;	
+}
+
+.HamidKarbalai.blackControllers .AudioDownload {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	z-index:1;
+	width: 15px;
+	height: 14px;
+	background: url(controllers/blackControllers/download-off.png) no-repeat;	
+}
+.HamidKarbalai.blackControllers .AudioDownload:hover {	
+    background: url(controllers/blackControllers/download-on.png) no-repeat;	
+}
+
+.HamidKarbalai.blackControllers .AudioFacebook {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	z-index:1;
+	width: 7px;
+	height: 14px;
+	background: url(controllers/blackControllers/facebook-off.png) no-repeat;	
+}
+.HamidKarbalai.blackControllers .AudioFacebook:hover {	
+    background: url(controllers/blackControllers/facebook-on.png) no-repeat;	
+}
+
+.HamidKarbalai.blackControllers .AudioTwitter {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	z-index:1;
+	width: 14px;
+	height: 14px;
+	background: url(controllers/blackControllers/twitter-off.png) no-repeat;	
+}
+.HamidKarbalai.blackControllers .AudioTwitter:hover {	
+    background: url(controllers/blackControllers/twitter-on.png) no-repeat;	
+}
+
+
+
+/* play */
+.HamidKarbalai.blackControllers .AudioPlay {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	width: 37px;
+	height: 37px;
+	background: url(controllers/blackControllers/play-off.png) no-repeat;		
+}
+.HamidKarbalai.blackControllers .AudioPlay:hover {	
+    background: url(controllers/blackControllers/play-on.png) no-repeat;	
+}
+/* pause */
+.HamidKarbalai.blackControllers .AudioPause {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	width: 37px;
+	height: 37px;
+	background: url(controllers/blackControllers/pause-off.png) no-repeat;
+}
+.HamidKarbalai.blackControllers .AudioPause:hover {
+	background: url(controllers/blackControllers/pause-on.png) no-repeat;
+}
+/* prev */
+.HamidKarbalai.blackControllers .AudioPrev {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	width: 27px;
+	height: 26px;
+	background: url(controllers/blackControllers/prev-off.png) no-repeat;	
+}
+.HamidKarbalai.blackControllers .AudioPrev:hover {	
+    background: url(controllers/blackControllers/prev-on.png) no-repeat;	
+}
+/* next */
+.HamidKarbalai.blackControllers .AudioNext {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	width: 27px;
+	height: 26px;
+	background: url(controllers/blackControllers/next-off.png) no-repeat;	
+}
+.HamidKarbalai.blackControllers .AudioNext:hover {	
+    background: url(controllers/blackControllers/next-on.png) no-repeat;	
+}
+
+.HamidKarbalai.blackControllers .bordersDiv {
+	position:absolute;
+	display: block;
+	margin:0;
+	padding:0;
+	height: 20px;
+	z-index:0;
+	border-top-width:1px;
+	border-top-style:solid;
+	border-top-color:#000000;	
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-bottom-color:#000000;
+}
+
+/*show/hide playlist */
+.HamidKarbalai.blackControllers .AudioShowHidePlaylist {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	z-index:1;
+	width: 12px;
+	height: 14px;
+	background: url(controllers/blackControllers/showhideplaylist-off.png) no-repeat;	
+}
+.HamidKarbalai.blackControllers .AudioShowHidePlaylist:hover {	
+    background: url(controllers/blackControllers/showhideplaylist-on.png) no-repeat;	
+}
+
+
+
+
+
+
+
+/* volume button Mute & UnMute*/
+.HamidKarbalai.blackControllers .VolumeButton {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	width: 7px;
+	height: 10px;
+	background: url(controllers/blackControllers/volume-off.png) no-repeat;
+}
+.HamidKarbalai.blackControllers .VolumeButton:hover {
+	background: url(controllers/blackControllers/volume-on.png) no-repeat;
+}
+
+.HamidKarbalai.blackControllers .VolumeButtonMuted {
+	background: url(controllers/blackControllers/volumeMute-off.png) no-repeat;
+}
+.HamidKarbalai.blackControllers .VolumeButtonMuted:hover {
+	background: url(controllers/blackControllers/volumeMute-on.png) no-repeat;
+}
+
+/* volume slider */
+.HamidKarbalai.blackControllers .VolumeSlider {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	margin:0;
+	padding:0;
+	width:100px;
+	height:4px;
+	/*background: #fff000;*/
+}
+
+.HamidKarbalai.blackControllers .VolumeSlider .ui-slider-handle {
+	display:none;
+}
+
+.HamidKarbalai.blackControllers .VolumeSlider .ui-slider-handle.ui-state-hover {
+	/*background: #fff000;*/
+}
+
+.HamidKarbalai.blackControllers .VolumeSlider .ui-slider-range {
+	position:relative;
+	height:4px;
+	/*background: #00F; blue*/
+}
+
+
+/* timer */
+.HamidKarbalai.blackControllers .AudioTimer_a {
+	/*float:left;*/
+	position:absolute;
+	/*top:10px;
+	left:15px;*/
+	display: block;
+	margin:0;
+	padding:0;
+	line-height:1;
+	font-weight: normal;
+	/*border:1px solid #F00;*/
+}
+
+.HamidKarbalai.blackControllers .AudioTimer_b {
+	/*float:left;*/
+	position:absolute;
+	/*top:10px;
+	right:15px;*/
+	display: block;
+	margin:0;
+	height:auto;
+	padding:0;
+	line-height:1;
+	display: block;
+	font-weight: normal;
+	/*border:1px solid #F00;*/
+}
+
+
+
+/* buffer */
+.HamidKarbalai.blackControllers .AudioBuffer {
+	/*float:left;*/
+	position:absolute;
+	cursor: pointer;
+	display: block;
+	height: 4px;
+	margin:0;
+	padding:0;	
+	/*width:100%;*/
+}
+.HamidKarbalai.blackControllers .AudioBuffer .ui-widget-content {  }
+.HamidKarbalai.blackControllers .AudioBuffer .ui-widget-header { /*background:#93C; mauve*/ }
+
+
+/* seek */
+.HamidKarbalai.blackControllers .AudioSeek {
+	/*clear:both;*/
+	cursor: pointer;
+	position:absolute;
+	height: 4px;
+	margin:0;
+	padding:0;
+	/*margin-top:-9px; margin:5px 0px 5px 0px; (AudioBuffer) + height:4px;*/
+}
+
+.HamidKarbalai.blackControllers .AudioSeek .ui-slider-handle {
+	display:none;
+}
+
+.HamidKarbalai.blackControllers .AudioSeek .ui-slider-handle.ui-state-hover {
+	/*background: #fff000;*/
+}
+
+.HamidKarbalai.blackControllers .AudioSeek .ui-slider-range {
+	height:4px;
+}
+
+
+
+/*song Author & Title*/
+.HamidKarbalai.blackControllers .songTitle {
+	position:absolute;
+	float:left;
+	display: block;
+	overflow:hidden;
+	height:14px;
+	margin:0;
+	padding:0;
+	line-height:1;
+	font-weight: normal;
+}
+
+.HamidKarbalai.blackControllers .songTitleInside {
+  position: absolute;
+  white-space: nowrap;
+}
+
+.HamidKarbalai.blackControllers .songAuthor {
+	position:absolute;
+	float:left;
+	display: block;
+	overflow:hidden;
+	height:12px;
+	margin:0;
+	padding:0;
+	line-height:1;
+	font-weight: normal;
+	/*border:1px solid #CC6;*/
+}
+
+
+
+/* playlist */
+.HamidKarbalai.blackControllers .selectedCategDiv {
+	cursor: pointer;
+	margin:0;
+	padding:0px 0px;
+	text-align:center;
+	/*font-size:13px;
+	line-height:1.5;
+	font-weight:bold;*/
+	background-image:url(controllers/blackControllers/categories_arrow_bg.png);
+	background-repeat:no-repeat;
+}
+.HamidKarbalai.blackControllers .innerSelectedCategDiv {
+	cursor: pointer;
+	overflow:hidden;
+	height:25px;
+	width:80%;
+	margin:0;
+	padding:0px 10%;
+	text-align:center;
+	font-size:13px;
+	line-height:1.9;
+	font-weight:bold;
+	background-image:url(controllers/blackControllers/categories_arrow_bg.png);
+	background-repeat:no-repeat;
+}
+
+.HamidKarbalai.blackControllers .searchDiv {
+	margin:0;
+	padding:0;
+	background-image:url(controllers/blackControllers/search_icon.png);
+	background-repeat:no-repeat;
+	background-position: 10px 50%;
+}
+
+.HamidKarbalai.blackControllers .search_term {
+	 background-color:#FFF;
+     border: 1px solid #333333;
+     color: #000000;
+     font:11px Arial, Helvetica, sans-serif;
+	 margin:3px 30px;
+     padding: 1px;
+}
+
+.HamidKarbalai.blackControllers .thumbsHolderWrapper {
+	position:absolute;
+	height:100%;
+	margin-top:0px;
+	overflow:hidden;
+}
+.HamidKarbalai.blackControllers .thumbsHolderVisibleWrapper {
+	/*position:absolute;*/
+	position:relative;
+	height:100%;
+	overflow:hidden;
+	clear:both;/*new*/
+}
+.HamidKarbalai.blackControllers .thumbsHolder {
+	position:absolute;
+	text-align:left;
+}
+/* thumbsOFF */
+.HamidKarbalai.blackControllers .thumbsHolder_ThumbOFF {
+	display:block;
+	height:30px;
+	cursor: pointer;
+	background:#000;
+	overflow:hidden;
+	border-bottom:1px solid #ff0000;
+	line-height:2.5em;
+}
+.HamidKarbalai.blackControllers .thumbsHolder_ThumbOFF  .padding {
+	padding:2px 10px 10px 10px;
+}
+
+
+/*  scroller start */
+.HamidKarbalai.blackControllers .slider-vertical {
+	display:none;
+	position:absolute;
+	width:9px;
+}
+
+.HamidKarbalai.blackControllers .slider-vertical.ui-slider { position: relative;}
+.HamidKarbalai.blackControllers .slider-vertical.ui-slider .ui-slider-handle { position: absolute; z-index: 2; width: 9px; height: 16px; cursor: pointer; background:url(controllers/blackControllers/scrollerFaceOFF.png) 0 0 no-repeat; }
+.HamidKarbalai.blackControllers .slider-vertical.ui-slider .ui-slider-handle:hover {  background:url(controllers/blackControllers/scrollerFaceON.png) 0 0 no-repeat; }
+.HamidKarbalai.blackControllers .slider-vertical.ui-slider .ui-slider-range { position: absolute; z-index: 1; display: block; border: 0; }
+
+
+.HamidKarbalai.blackControllers .slider-vertical.ui-slider-vertical { width: 9px; height: 100px; }
+.HamidKarbalai.blackControllers .slider-vertical.ui-slider-vertical .ui-slider-handle { left: 0px; margin-left: 0px; margin-bottom: -16px;; border: 0; }
+.HamidKarbalai.blackControllers .slider-vertical.ui-slider-vertical .ui-slider-range { left: 0; width: 100%; }
+.HamidKarbalai.blackControllers .slider-vertical.ui-slider-vertical .ui-slider-range-min { bottom: 0; }
+.HamidKarbalai.blackControllers .slider-vertical.ui-slider-vertical .ui-slider-range-max { top: 0; }
+
+
+/* Component containers
+----------------------------------*/
+.HamidKarbalai.blackControllers .slider-vertical.ui-widget-content { /*background: #ff7800;*/}
+.HamidKarbalai.blackControllers .slider-vertical .ui-widget-header { /*background: #24ff00;*/ }
+
+
+/* Corner radius */
+.HamidKarbalai.blackControllers .slider-vertical.ui-corner-all {}
+
+/* Interaction states
+----------------------------------
+.HamidKarbalai.blackControllers .slider-vertical.ui-state-default {background: #000000; }
+.HamidKarbalai.blackControllers .slider-vertical.ui-state-hover { background: #FFF000;  }
+*/
+/*  scroller end */
+
+
+
+
+
+
+
+
+
+/* Interaction states
+----------------------------------
+.HamidKarbalai.giant .slider-vertical.ui-state-default {background: #000000; }
+.HamidKarbalai.giant .slider-vertical.ui-state-hover { background: #FFF000;  }
+*/
+/*  scroller end */
+
+.hideElement {
+	display:none;
+}
+
+.clearBoth {
+	clear: both;
+}
